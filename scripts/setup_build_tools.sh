@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo yum install -y dnf
+sudo yum install -y python3 dnf patch gcc gcc-c++ 
 
 # bazel install
  sudo dnf install -y dnf-plugins-core
