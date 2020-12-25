@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 WORKSPACE=${WORKSPACE:-$HOME/tf-operator-containers}
 if [[ ! -d ${HOME}/env ]]; then

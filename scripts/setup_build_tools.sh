@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 sudo yum install -y python3 dnf patch gcc gcc-c++ 
 

@@ -5,7 +5,7 @@ Requirements:
 - Run scripts/setup_build_software.sh from https://github.com/progmaticlab/tf-operator.git  before running scripts below
 
 ```bash
-scripts\setup_build_tools.sh
-scripts\build.sh
+scripts/setup_build_tools.sh
+scripts/build.sh
 
 ```
