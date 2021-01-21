@@ -86,6 +86,7 @@ func TestKubemanagerConfigurationParametersWithDefaultValues(t *testing.T) {
 	assert.Equal(t, configuration.KubernetesClusterName, KubernetesClusterName)
 	assert.Equal(t, configuration.PodSubnets, KubernetesPodSubnets)
 	assert.Equal(t, configuration.IPFabricSubnets, KubernetesIpFabricSubnets)
+	assert.Equal(t, configuration.PublicFIPPool, KubernetesPublicFIPPool)
 	assert.Equal(t, configuration.ServiceSubnets, KubernetesServiceSubnets)
 	assert.Equal(t, *configuration.IPFabricForwarding, KubernetesIPFabricForwarding)
 	assert.Equal(t, *configuration.HostNetworkService, KubernetesHostNetworkService)
@@ -109,6 +110,7 @@ func TestKubemanagerConfigurationParametersWithSetValues(t *testing.T) {
 					KubernetesClusterName: "test_cluster",
 					PodSubnets:            "2.2.2.2/22",
 					IPFabricSubnets:       "3.3.3.3/11",
+					PublicFIPPool:         "{}",
 					ServiceSubnets:        "4.4.4.4/21",
 					IPFabricForwarding:    &trueVal,
 					HostNetworkService:    &trueVal,
@@ -126,6 +128,7 @@ func TestKubemanagerConfigurationParametersWithSetValues(t *testing.T) {
 	assert.Equal(t, configuration.KubernetesClusterName, kubemanager.Spec.ServiceConfiguration.KubernetesClusterName)
 	assert.Equal(t, configuration.PodSubnets, kubemanager.Spec.ServiceConfiguration.PodSubnets)
 	assert.Equal(t, configuration.IPFabricSubnets, kubemanager.Spec.ServiceConfiguration.IPFabricSubnets)
+	assert.Equal(t, configuration.PublicFIPPool, kubemanager.Spec.ServiceConfiguration.PublicFIPPool)
 	assert.Equal(t, configuration.ServiceSubnets, kubemanager.Spec.ServiceConfiguration.ServiceSubnets)
 	assert.Equal(t, *configuration.IPFabricForwarding, *kubemanager.Spec.ServiceConfiguration.IPFabricForwarding)
 	assert.Equal(t, *configuration.HostNetworkService, *kubemanager.Spec.ServiceConfiguration.HostNetworkService)

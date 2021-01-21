@@ -252,4 +252,5 @@ const (
 	ToragentSslCertfile                         string = "/etc/contrail/ssl/certs/server.pem"
 	ToragentSslKeyfile                          string = "/etc/contrail/ssl/private/server-privkey.pem"
 	ToragentSslCacertfile                       string = "/etc/contrail/ssl/certs/ca-cert.pem"
+	KubernetesPublicFIPPool                     string = "{}"
 )
